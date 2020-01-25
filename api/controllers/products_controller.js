@@ -1,4 +1,4 @@
-const url = process.env.API_URL; // "API_URL": "http://localhost:3000", for development mode
+const url = "https://node-rest-api-shop.herokuapp.com"; // "API_URL": "http://localhost:3000", for development mode
 
 
 const mongoose = require('mongoose');
