@@ -10,11 +10,11 @@ const userRoutes = require('./api/routes/user');
 
 mongoose.connect(
   "mongodb+srv://dankomaksym:" + 
-  process.env.MONGO_ATLAS_PW + 
+  "12250205" + //process.env.MONGO_ATLAS_PW + 
   "@cluster0-8pgcp.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
-    // useUnifiedTopology: true
+    useUnifiedTopology: true
   });
 
 app.use(morgan('dev'));
