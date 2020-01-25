@@ -11,4 +11,4 @@ require('dotenv').config();
 
 // console.log(process.env.API_URL);
 console.log('mongo-atlas' + process.env.MONGO_ATLAS_PW);
-console.log('secret' + process.env.secret);
+console.log('secret' + process.env.JWT_KEY);
