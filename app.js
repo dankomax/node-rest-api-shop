@@ -10,7 +10,7 @@ const userRoutes = require('./api/routes/user');
 
 mongoose.connect(
   "mongodb+srv://dankomaksym:" + 
-  "12250205" + //process.env.MONGO_ATLAS_PW + 
+  process.env.MONGO_ATLAS_PW + 
   "@cluster0-8pgcp.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,

@@ -13,3 +13,5 @@ npm install --save multer
 npm install --save bcryptjs
 
 npm install jsonwebtoken --save
+
+npm install dotenv --save

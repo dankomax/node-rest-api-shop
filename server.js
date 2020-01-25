@@ -3,12 +3,13 @@ const app = require('./app');
 
 const port = process.env.PORT || 3000;
 
+require('dotenv').config();
+
 const server = http.createServer(app);
 
 server.listen(port);
 
-require('dotenv').config();
 
 // console.log(process.env.API_URL);
-console.log('mongo-atlas' + process.env.MONGO_ATLAS_PW);
-console.log('secret' + process.env.JWT_KEY);
+// console.log('mongo-atlas' + process.env.MONGO_ATLAS_PW);
+// console.log('secret' + process.env.JWT_KEY);
