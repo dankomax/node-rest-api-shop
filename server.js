@@ -7,4 +7,6 @@ const server = http.createServer(app);
 
 server.listen(port);
 
+require('dotenv').config();
+
 // console.log(process.env.API_URL);
