@@ -14,7 +14,7 @@ mongoose.connect(
   "@cluster0-8pgcp.mongodb.net/test?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    // useUnifiedTopology: true
   });
 
 app.use(morgan('dev'));
