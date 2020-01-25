@@ -1,6 +1,10 @@
 {
   "env": {
     "MONGO_ATLAS_PW": "12250205",
-    "JWT_KEY": "secret"
+    "JWT_KEY": "secret",
+    "API_URL": "https://node-rest-api-shop.herokuapp.com"
+    
   }
 }
+
+

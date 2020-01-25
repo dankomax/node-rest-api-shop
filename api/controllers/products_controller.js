@@ -1,3 +1,6 @@
+const url = process.env.API_URL; // "API_URL": "http://localhost:3000", for development mode
+
+
 const mongoose = require('mongoose');
 
 
@@ -21,7 +24,7 @@ exports.products_get_all = (req, res, next) => {
             _id: doc._id,
             request: {
               type: 'GET',
-              url: 'http://localhost:3000/products/' + doc._id
+              url: url + '/products/' + doc._id
             }
           }
         })
@@ -68,7 +71,7 @@ exports.product_create = (req, res, next) => {
           _id: result._id,
           request: {
             type: 'GET',
-            url: 'http://localhost:3000/products/' + result._id
+            url: url + '/products/' + result._id
           }
         }
       })
@@ -97,7 +100,7 @@ exports.product_get = (req, res, next) => {
           request: {
             type: 'GET',
             description: 'Get all products',
-            url: 'http://localhost:3000/products'
+            url: url + '/products'
           }
         });
       } else {
@@ -152,7 +155,7 @@ exports.product_delete = (req, res, next) => {
         message: 'Product has been deleted',
         request: {
           type: 'POST',
-          url: 'http//localhost:3000/products',
+          url: url + '/products',
           body: { name: 'String', price: 'Number' }
         }
       });

@@ -1,3 +1,5 @@
+const url = process.env.API_URL; // "API_URL": "http://localhost:3000", for development mode
+
 const mongoose = require('mongoose');
 
 
@@ -20,7 +22,7 @@ exports.orders_get_all = (req, res, next) => {
             quantity: doc.quantity,
             request: {
               type: 'GET',
-              url: 'http://localhost:3000/orders/' + doc._id
+              url: url + '/orders/' + doc._id
             }
           }
         })
@@ -68,7 +70,7 @@ exports.orders_create_order = (req, res, next) => {
         },
         request: {
           type: 'GET',
-          url: 'http://localhost:3000/orders/' + result._id
+          url: url + '/orders/' + result._id
         }
       });
     })
@@ -100,7 +102,7 @@ exports.orders_get_order = (req, res, next) => {
         order: order,
         request: {
           type: 'GET',
-          url: 'http://localhost:3000/orders'
+          url: url + '/orders'
         }
       });
     })
@@ -124,7 +126,7 @@ exports.delete_order = (req, res, next) => {
         message: 'Order has been removed',
         request: {
           type: 'POST',
-          url: 'http://localhost:3000/orders',
+          url: url + '/orders',
           body: { productId: "ID", quantity: "Number" }
         }
       })
