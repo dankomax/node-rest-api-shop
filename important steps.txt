@@ -15,3 +15,7 @@ npm install --save bcryptjs
 npm install jsonwebtoken --save
 
 npm install dotenv --save
+
+
+heroku config:set MONGO_ATLAS_PW=12250205
+heroku config:set JWT_KEY=secret
